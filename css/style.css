@@ -1176,8 +1176,8 @@ h4 { font-size: var(--text-h4); }
 
   .nav-links, .nav-actions { display: none; }
   .nav-hamburger { display: flex; }
-  .nav-inner { position: relative; justify-content: flex-end; }
-  .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); }
+  .nav-inner { position: relative; justify-content: flex-end; min-height: 66px; }
+  .nav-logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
 
   .hero { padding: 130px 0 48px; }
   .hero-inner { gap: 24px; }
