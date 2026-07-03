@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pippin Plaza — UI Reference</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .guide-page {
+      padding: 56px 0 96px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .guide-intro {
+      max-width: 760px;
+      margin-bottom: 56px;
+    }
+
+    .guide-section {
+      padding: 40px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .guide-section:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .guide-panel {
+      background: rgba(30,32,40,0.72);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      min-width: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .guide-panel h3,
+    .guide-panel h4 {
+      margin-bottom: 12px;
+    }
+
+    .guide-panel p:last-child,
+    .guide-panel ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .guide-caption {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .guide-code {
+      background: #0b0d12;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .guide-code pre {
+      margin: 0;
+      padding: 18px;
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .guide-note,
+    .guide-list {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .guide-list {
+      list-style: disc;
+      margin: 0 0 0 20px;
+    }
+
+    .guide-list li + li {
+      margin-top: 8px;
+    }
+
+    .guide-brand-lockup {
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .guide-brand-lockup img {
+      width: min(320px, 100%);
+      height: auto;
+    }
+
+    .guide-token-groups {
+      display: grid;
+      gap: 24px;
+    }
+
+    .guide-swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .guide-swatch {
+      background: rgba(15,17,23,0.55);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .guide-swatch-chip {
+      height: 72px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .guide-swatch-meta,
+    .guide-token-meta {
+      padding: 12px 14px;
+      display: grid;
+      gap: 4px;
+    }
+
+    .guide-swatch-meta strong,
+    .guide-token-meta strong {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-primary);
+    }
+
+    .guide-swatch-meta span,
+    .guide-token-meta span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      word-break: break-word;
+    }
+
+    .guide-token-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .guide-token {
+      background: rgba(15,17,23,0.55);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+    }
+
+    .guide-type-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .guide-type-row {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+      background: rgba(15,17,23,0.48);
+    }
+
+    .guide-type-spec {
+      margin-top: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .guide-button-stack,
+    .guide-social-stack,
+    .guide-nav-stack,
+    .guide-card-stack,
+    .guide-space-stack,
+    .guide-breakpoint-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .guide-inline-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .guide-force-hover-primary {
+      background: var(--accent-hover);
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(249,115,22,0.35);
+    }
+
+    .guide-force-hover-secondary {
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+      transform: translateY(-1px);
+    }
+
+    .guide-force-hover-ghost {
+      color: var(--text-primary);
+    }
+
+    .guide-force-hover-store {
+      border-color: var(--accent-primary);
+      background: rgba(249,115,22,0.08);
+      color: var(--text-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(249,115,22,0.15);
+    }
+
+    .guide-force-hover-store .store-name {
+      background: linear-gradient(90deg, var(--text-primary), var(--accent-primary), var(--text-primary));
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 1.5s linear infinite;
+    }
+
+    .guide-force-hover-social {
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+      background: rgba(249,115,22,0.08);
+    }
+
+    .guide-force-focus {
+      outline: 3px solid var(--accent-primary);
+      outline-offset: 3px;
+    }
+
+    .guide-force-focus-social {
+      outline: 3px solid var(--accent-primary);
+      outline-offset: 4px;
+    }
+
+    .guide-nav-canvas,
+    .guide-footer-canvas {
+      background: rgba(15,17,23,0.8);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .guide-nav-canvas .nav,
+    .guide-nav-canvas .mobile-menu {
+      position: static;
+      top: auto;
+      left: auto;
+      right: auto;
+    }
+
+    .guide-nav-canvas .mobile-menu {
+      display: flex;
+      border-top: 1px solid var(--border-color);
+      border-bottom: none;
+    }
+
+    .guide-nav-canvas .container,
+    .guide-footer-canvas .container {
+      max-width: none;
+    }
+
+    .guide-nav-canvas .nav {
+      background: rgba(15,17,23,0.9);
+      border-bottom-color: var(--border-color);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .guide-hamburger-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .guide-hamburger-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      background: rgba(15,17,23,0.55);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .guide-card-stage {
+      display: grid;
+      gap: 18px;
+    }
+
+    .guide-card-frame {
+      max-width: 360px;
+    }
+
+    .guide-space-row {
+      display: grid;
+      grid-template-columns: 110px minmax(0, 1fr) 88px;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .guide-space-row strong,
+    .guide-breakpoint-row strong {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-primary);
+    }
+
+    .guide-space-bar {
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-soft));
+      min-width: 16px;
+    }
+
+    .guide-space-row span,
+    .guide-breakpoint-row span {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .guide-breakpoint-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      padding: 14px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      background: rgba(15,17,23,0.55);
+    }
+
+    .guide-footer-canvas .footer {
+      padding-bottom: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      .guide-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .guide-swatch-grid,
+      .guide-token-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .guide-space-row {
+        grid-template-columns: 96px minmax(0, 1fr);
+      }
+
+      .guide-space-row span {
+        grid-column: 1 / -1;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="guide-page">
+    <div class="container">
+      <header class="guide-intro">
+        <div class="label">Internal Reference</div>
+        <h1 class="h1" style="margin-top:12px">Pippin Plaza — UI Reference (internal/press)</h1>
+        <p class="lead" style="margin-top:16px">This page is an internal single-file reference for the current Pippin Plaza website UI. It is intentionally not linked from public navigation and documents the live visual language as it exists in <span class="mono">css/style.css</span> and the five public HTML pages.</p>
+      </header>
+
+      <section class="guide-section">
+        <div class="section-header">
+          <div class="label">1. Header</div>
+          <h2 class="h1">Reference intro</h2>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-panel">
+            <div class="guide-caption">Live preview</div>
+            <div class="page-hero" style="padding:32px 0 8px;text-align:left">
+              <div class="label">Internal Reference</div>
+              <h1 class="h1" style="margin-top:12px">Pippin Plaza — UI Reference (internal/press)</h1>
+              <p style="max-width:680px;margin:16px 0 0">This page is an internal single-file reference for the current Pippin Plaza website UI. It is intentionally not linked from public navigation and documents the live visual language as it exists in <span class="mono">css/style.css</span> and the five public HTML pages.</p>
+            </div>
+          </div>
+          <div class="guide-code">
+            <pre><code>&lt;header class="guide-intro"&gt;
+  &lt;div class="label"&gt;Internal Reference&lt;/div&gt;
+  &lt;h1 class="h1" style="margin-top:12px"&gt;
+    Pippin Plaza -- UI Reference (internal/press)
+  &lt;/h1&gt;
+  &lt;p class="lead" style="margin-top:16px"&gt;
+    This page is an internal single-file reference for the current
+    Pippin Plaza website UI.
+  &lt;/p&gt;
+&lt;/header&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <div class="section-header">
+          <div class="label">2. Brand</div>
+          <h2 class="h1">Logo, tagline, and voice</h2>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-panel">
+            <div class="guide-caption">Live preview</div>
+            <div class="guide-brand-lockup">
+              <img src="images/logo-wordmark.png" alt="Pippin Plaza" />
+              <h3>Play together. Solve together.</h3>
+              <p class="guide-note">Voice from the live homepage reads as direct, playful, teamwork-first, and lightly competitive. The copy pushes co-op accountability with lines like "No solo carries," "No passengers," and "Zero excuses," while still staying approachable.</p>
+            </div>
+          </div>
+          <div class="guide-code">
+            <pre><code>&lt;div class="guide-brand-lockup"&gt;
+  &lt;img src="images/logo-wordmark.png" alt="Pippin Plaza" /&gt;
+  &lt;h3&gt;Play together. Solve together.&lt;/h3&gt;
+  &lt;p&gt;
+    Voice from the live homepage reads as direct, playful,
+    teamwork-first, and lightly competitive.
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <div class="section-header">
+          <div class="label">3. Tokens</div>
+          <h2 class="h1">Root custom properties</h2>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-panel">
+            <div class="guide-caption">Live preview</div>
+            <div class="guide-token-groups">
+              <div>
+                <h3 style="margin-bottom:14px">Color tokens</h3>
+                <div class="guide-swatch-grid">
+                  <div class="guide-swatch"><div class="guide-swatch-chip" style="background:#0F1117"></div><div class="guide-swatch-meta"><strong>--bg-primary</strong><span>#0F1117</span></div></div>
+                  <div class="guide-swatch"><div class="guide-swatch-chip" style="background:#1E2028"></div><div class="guide-swatch-meta"><strong>--bg-secondary</strong><span>#1E2028</span></div></div>
+                  <div class="guide-swatch"><div class="guide-swatch-chip" style="background:#1E2028"></div><div class="guide-swatch-meta"><strong>--bg-card</strong><span>#1E2028</span></div></div>
+                  <div class="guide-swatch"><div class="guide-swatch-chip" style="background:#FAFBFC"></div><div class="guide-swatch-meta"><strong>--bg-light</strong><span>#FAFBFC</span></div></div>
+                  <div class="guide-swatch"><div class="guide-swatch-chip" style="background:#FAFBFC"></div><div class="guide-swatch-meta"><strong>--text-primary</strong><span>#FAFBFC</span></div></div>
+                  <div class="guide-swatch"><div class="guide-swatch-chip" style="background:#E5E7EB"></div><div class="guide-swatch-meta"><strong>--text-secondary</strong><span>#E5E7EB</span></div></div>
+                  <div class="guide-swatch"><div class="guide-swatch-chip" style="background:#6B7280"></div><div class="guide-swatch-meta"><strong>--text-muted</strong><span>#6B7280</span></div></div>
+                  <div class="guide-swatch"><div class="guide-swatch-chip" style="background:#0F1117"></div><div class="guide-swatch-meta"><strong>--text-dark</strong><span>#0F1117</span></div></div>
+                  <div class="guide-swatch"><div class="guide-swatch-chip" style="background:#F97316"></div><div class="guide-swatch-meta"><strong>--accent-primary</strong><span>#F97316</span></div></div>
+                  <div class="guide-swatch"><div class="guide-swatch-chip" style="background:#FB923C"></div><div class="guide-swatch-meta"><strong>--accent-hover</strong><span>#FB923C</span></div></div>
+                  <div class="guide-swatch"><div class="guide-swatch-chip" style="background:#FDBA74"></div><div class="guide-swatch-meta"><strong>--accent-soft</strong><span>#FDBA74</span></div></div>
+                  <div class="guide-swatch"><div class="guide-swatch-chip" style="background:#38BDF8"></div><div class="guide-swatch-meta"><strong>--accent-cool</strong><span>#38BDF8</span></div></div>
+                  <div class="guide-swatch"><div class="guide-swatch-chip" style="background:#22C55E"></div><div class="guide-swatch-meta"><strong>--accent-success</strong><span>#22C55E</span></div></div>
+                  <div class="guide-swatch"><div class="guide-swatch-chip" style="background:#2A2D37"></div><div class="guide-swatch-meta"><strong>--border-color</strong><span>#2A2D37</span></div></div>
+                  <div class="guide-swatch"><div class="guide-swatch-chip" style="background:#E5E7EB"></div><div class="guide-swatch-meta"><strong>--border-light</strong><span>#E5E7EB</span></div></div>
+                </div>
+              </div>
+              <div>
+                <h3 style="margin-bottom:14px">Non-color root tokens</h3>
+                <div class="guide-token-grid">
+                  <div class="guide-token"><div class="guide-token-meta"><strong>--radius-sm</strong><span>6px</span></div></div>
+                  <div class="guide-token"><div class="guide-token-meta"><strong>--radius-md</strong><span>12px</span></div></div>
+                  <div class="guide-token"><div class="guide-token-meta"><strong>--radius-lg</strong><span>20px</span></div></div>
+                  <div class="guide-token"><div class="guide-token-meta"><strong>--radius-xl</strong><span>32px</span></div></div>
+                  <div class="guide-token"><div class="guide-token-meta"><strong>--font-display</strong><span>'Jumps-Winter', 'DM Sans', sans-serif</span></div></div>
+                  <div class="guide-token"><div class="guide-token-meta"><strong>--font-body</strong><span>'DM Sans', sans-serif</span></div></div>
+                  <div class="guide-token"><div class="guide-token-meta"><strong>--font-mono</strong><span>'JetBrains Mono', monospace</span></div></div>
+                  <div class="guide-token"><div class="guide-token-meta"><strong>--shadow-card</strong><span>0 1px 3px rgba(0,0,0,0.4), 0 4px 24px rgba(0,0,0,0.2)</span></div></div>
+                  <div class="guide-token"><div class="guide-token-meta"><strong>--shadow-glow</strong><span>0 0 40px rgba(249,115,22,0.18)</span></div></div>
+                  <div class="guide-token"><div class="guide-token-meta"><strong>--max-width</strong><span>1140px</span></div></div>
+                  <div class="guide-token"><div class="guide-token-meta"><strong>--section-padding</strong><span>96px 0</span></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="guide-code">
+            <pre><code>&lt;div class="guide-swatch"&gt;
+  &lt;div class="guide-swatch-chip" style="background:#F97316"&gt;&lt;/div&gt;
+  &lt;div class="guide-swatch-meta"&gt;
+    &lt;strong&gt;--accent-primary&lt;/strong&gt;
+    &lt;span&gt;#F97316&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="guide-token"&gt;
+  &lt;div class="guide-token-meta"&gt;
+    &lt;strong&gt;--font-display&lt;/strong&gt;
+    &lt;span&gt;'Jumps-Winter', 'DM Sans', sans-serif&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <div class="section-header">
+          <div class="label">4. Type</div>
+          <h2 class="h1">Typography scale</h2>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-panel">
+            <div class="guide-caption">Live preview</div>
+            <div class="guide-type-stack">
+              <div class="guide-type-row"><div class="display">Display headline</div><div class="guide-type-spec">Class: <span class="mono">.display</span> | family: <span class="mono">var(--font-display)</span> | weight: <span class="mono">700</span> | size: <span class="mono">clamp(2.5rem, 6vw, 4.5rem)</span> | line-height: <span class="mono">1.15</span></div></div>
+              <div class="guide-type-row"><div class="h1">Heading level one</div><div class="guide-type-spec">Class: <span class="mono">.h1</span> | family: <span class="mono">var(--font-display)</span> | weight: <span class="mono">700</span> | size: <span class="mono">clamp(2rem, 4vw, 3rem)</span> | line-height: <span class="mono">1.15</span></div></div>
+              <div class="guide-type-row"><div class="h2">Heading level two</div><div class="guide-type-spec">Class: <span class="mono">.h2</span> | family: <span class="mono">var(--font-display)</span> | weight: <span class="mono">700</span> | size: <span class="mono">clamp(1.5rem, 3vw, 2rem)</span> | line-height: <span class="mono">1.15</span></div></div>
+              <div class="guide-type-row"><div class="h3">Heading level three</div><div class="guide-type-spec">Class: <span class="mono">.h3</span> | family: <span class="mono">var(--font-display)</span> | weight: <span class="mono">700</span> | size: <span class="mono">1.25rem</span> | line-height: <span class="mono">1.15</span></div></div>
+              <div class="guide-type-row"><h4>Heading level four</h4><div class="guide-type-spec">Element: <span class="mono">&lt;h4&gt;</span> | family: <span class="mono">var(--font-display)</span> | weight: <span class="mono">700</span> | line-height: <span class="mono">1.15</span> | note: no explicit size token is defined in <span class="mono">style.css</span></div></div>
+              <div class="guide-type-row"><p>Body copy used across hero, prose, and support content. The default body family is DM Sans with a global line-height of 1.6.</p><div class="guide-type-spec">Element: <span class="mono">body / p</span> | family: <span class="mono">var(--font-body)</span> | weight: <span class="mono">400</span> | size: <span class="mono">16px base</span> | line-height: <span class="mono">1.6</span></div></div>
+              <div class="guide-type-row"><p class="lead">Lead paragraph sample for section intros and hero support copy.</p><div class="guide-type-spec">Class: <span class="mono">.lead</span> | family: <span class="mono">var(--font-body)</span> | size: <span class="mono">1.125rem</span> | line-height: <span class="mono">1.7</span></div></div>
+              <div class="guide-type-row"><div class="label">Section Label</div><div class="guide-type-spec">Class: <span class="mono">.label</span> | family: <span class="mono">var(--font-mono)</span> | size: <span class="mono">0.95rem</span> | transform: <span class="mono">uppercase</span> | tracking: <span class="mono">0.14em</span></div></div>
+              <div class="guide-type-row"><p class="mono">ABC123 / support@pippinplaza.com</p><div class="guide-type-spec">Class: <span class="mono">.mono</span> | family: <span class="mono">var(--font-mono)</span> | size: <span class="mono">inherits from context</span></div></div>
+              <div class="guide-type-row"><div class="prose" style="max-width:none;padding-bottom:0"><p class="last-updated">Last updated: 2026-05-04 · Effective: 2026-05-04</p></div><div class="guide-type-spec">Class: <span class="mono">.last-updated</span> | family: <span class="mono">var(--font-mono)</span> | size: <span class="mono">0.8rem</span> | color: <span class="mono">var(--text-muted)</span></div></div>
+            </div>
+          </div>
+          <div class="guide-code">
+            <pre><code>&lt;div class="display"&gt;Display headline&lt;/div&gt;
+&lt;div class="h1"&gt;Heading level one&lt;/div&gt;
+&lt;div class="h2"&gt;Heading level two&lt;/div&gt;
+&lt;div class="h3"&gt;Heading level three&lt;/div&gt;
+&lt;h4&gt;Heading level four&lt;/h4&gt;
+&lt;p class="lead"&gt;Lead paragraph sample.&lt;/p&gt;
+&lt;div class="label"&gt;Section Label&lt;/div&gt;
+&lt;p class="mono"&gt;ABC123 / support@pippinplaza.com&lt;/p&gt;
+&lt;p class="last-updated"&gt;
+  Last updated: 2026-05-04 · Effective: 2026-05-04
+&lt;/p&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <div class="section-header">
+          <div class="label">5. Buttons</div>
+          <h2 class="h1">Button and store CTA variants</h2>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-panel">
+            <div class="guide-caption">Live preview</div>
+            <div class="guide-button-stack">
+              <div>
+                <h3 style="margin-bottom:12px">Base and site buttons</h3>
+                <div class="guide-inline-wrap">
+                  <a href="#" class="btn">.btn base</a>
+                  <a href="#" class="btn btn-primary">.btn-primary</a>
+                  <a href="#" class="btn btn-primary btn-sm">.btn-sm</a>
+                  <a href="#" class="btn btn-primary btn-lg">.btn-lg</a>
+                  <a href="#" class="btn btn-secondary">.btn-secondary</a>
+                  <a href="#" class="btn btn-ghost">.btn-ghost</a>
+                </div>
+              </div>
+              <div>
+                <h3 style="margin-bottom:12px">Defined hover states</h3>
+                <div class="guide-inline-wrap">
+                  <a href="#" class="btn btn-primary guide-force-hover-primary">Primary hover</a>
+                  <a href="#" class="btn btn-secondary guide-force-hover-secondary">Secondary hover</a>
+                  <a href="#" class="btn btn-ghost guide-force-hover-ghost">Ghost hover</a>
+                </div>
+              </div>
+              <div>
+                <h3 style="margin-bottom:12px">Defined focus-visible states</h3>
+                <div class="guide-inline-wrap">
+                  <a href="#" class="btn btn-primary guide-force-focus">Primary focus-visible</a>
+                  <a href="#" class="btn btn-secondary guide-force-focus">Secondary focus-visible</a>
+                  <a href="#" class="btn btn-ghost guide-force-focus">Ghost focus-visible</a>
+                </div>
+              </div>
+              <div>
+                <h3 style="margin-bottom:12px">Disabled state</h3>
+                <div class="guide-inline-wrap">
+                  <button class="btn" disabled>.btn base</button>
+                  <button class="btn btn-primary" disabled>.btn-primary</button>
+                  <button class="btn btn-secondary" disabled>.btn-secondary</button>
+                  <button class="btn btn-ghost" disabled>.btn-ghost</button>
+                  <button class="btn-store" disabled>
+                    <span class="store-icon"><img src="images/icon-appstore.png" alt="App Store" /></span>
+                    <span class="store-text">
+                      <span class="store-sub">Download on the</span>
+                      <span class="store-name">App Store</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div>
+                <h3 style="margin-bottom:12px">Store buttons</h3>
+                <div class="guide-inline-wrap">
+                  <a href="#" class="btn-store">
+                    <span class="store-icon"><img src="images/icon-appstore.png" alt="App Store" /></span>
+                    <span class="store-text">
+                      <span class="store-sub">Download on the</span>
+                      <span class="store-name">App Store</span>
+                    </span>
+                  </a>
+                  <a href="#" class="btn-store coming-soon">
+                    <span class="store-icon"><img src="images/icon-googleplay.png" alt="Google Play" /></span>
+                    <span class="store-text">
+                      <span class="store-sub">Get it on</span>
+                      <span class="store-name">Google Play</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="guide-inline-wrap" style="margin-top:12px">
+                  <a href="#" class="btn-store guide-force-hover-store">
+                    <span class="store-icon"><img src="images/icon-appstore.png" alt="App Store" /></span>
+                    <span class="store-text">
+                      <span class="store-sub">Download on the</span>
+                      <span class="store-name">Store hover</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="prose" style="max-width:none;padding-bottom:0">
+                <div class="highlight-box" style="margin:0">
+                  <p><strong>Current state:</strong> hover, focus-visible, and disabled button states are now defined in <span class="mono">style.css</span>. The store CTA remains intentionally clickable when marked <span class="mono">.coming-soon</span>; disabled styles are forward-looking only.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="guide-code">
+            <pre><code>&lt;a href="#" class="btn btn-primary"&gt;.btn-primary&lt;/a&gt;
+&lt;a href="#" class="btn btn-primary btn-sm"&gt;.btn-sm&lt;/a&gt;
+&lt;a href="#" class="btn btn-primary btn-lg"&gt;.btn-lg&lt;/a&gt;
+&lt;a href="#" class="btn btn-secondary"&gt;.btn-secondary&lt;/a&gt;
+&lt;a href="#" class="btn btn-ghost"&gt;.btn-ghost&lt;/a&gt;
+&lt;a href="#" class="btn btn-primary guide-force-focus"&gt;
+  Primary focus-visible
+&lt;/a&gt;
+&lt;button class="btn btn-secondary" disabled&gt;
+  .btn-secondary
+&lt;/button&gt;
+
+&lt;a href="#" class="btn-store coming-soon"&gt;
+  &lt;span class="store-icon"&gt;
+    &lt;img src="images/icon-googleplay.png" alt="Google Play" /&gt;
+  &lt;/span&gt;
+  &lt;span class="store-text"&gt;
+    &lt;span class="store-sub"&gt;Get it on&lt;/span&gt;
+    &lt;span class="store-name"&gt;Google Play&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/a&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <div class="section-header">
+          <div class="label">6. Navigation</div>
+          <h2 class="h1">Desktop, hamburger, and mobile menu</h2>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-panel">
+            <div class="guide-caption">Live preview</div>
+            <div class="guide-nav-stack">
+              <div class="guide-nav-canvas">
+                <nav class="nav scrolled">
+                  <div class="container">
+                    <div class="nav-inner">
+                      <a href="index.html" class="nav-logo">
+                        <img src="images/logo-wordmark.png" alt="Pippin Plaza" class="nav-logo-img" />
+                      </a>
+                      <div class="nav-links">
+                        <a href="#">How It Works</a>
+                        <a href="#">Features</a>
+                        <a href="#">Support</a>
+                        <a href="#">Press</a>
+                      </div>
+                      <div class="nav-actions">
+                        <a href="#" class="btn btn-primary btn-sm">Download</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+              <div class="guide-hamburger-row">
+                <div class="guide-hamburger-wrap">
+                  <button class="nav-hamburger" type="button" aria-label="Toggle menu" aria-expanded="false" style="display:flex">
+                    <span></span><span></span><span></span>
+                  </button>
+                  Closed
+                </div>
+                <div class="guide-hamburger-wrap">
+                  <button class="nav-hamburger open" type="button" aria-label="Toggle menu" aria-expanded="true" style="display:flex">
+                    <span></span><span></span><span></span>
+                  </button>
+                  Open
+                </div>
+              </div>
+              <div class="guide-nav-canvas">
+                <div class="mobile-menu open">
+                  <a href="#">How It Works</a>
+                  <a href="#">Features</a>
+                  <a href="#">Support</a>
+                  <a href="#">Press</a>
+                  <a href="#" class="btn btn-primary">Download Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="guide-code">
+            <pre><code>&lt;nav class="nav"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="nav-inner"&gt;
+      &lt;a href="index.html" class="nav-logo"&gt;
+        &lt;img src="images/logo-wordmark.png" alt="Pippin Plaza" class="nav-logo-img" /&gt;
+      &lt;/a&gt;
+      &lt;div class="nav-links"&gt;
+        &lt;a href="#how-it-works"&gt;How It Works&lt;/a&gt;
+        &lt;a href="#features"&gt;Features&lt;/a&gt;
+        &lt;a href="support.html"&gt;Support&lt;/a&gt;
+        &lt;a href="press.html"&gt;Press&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="nav-actions"&gt;
+        &lt;a href="#download" class="btn btn-primary btn-sm"&gt;Download&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;button class="nav-hamburger" type="button"&gt;
+        &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;div class="mobile-menu open"&gt;...&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <div class="section-header">
+          <div class="label">7. Cards</div>
+          <h2 class="h1">Panels, accordions, placeholders, and footer columns</h2>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-panel">
+            <div class="guide-caption">Live preview</div>
+            <div class="guide-card-stage">
+              <div class="prose" style="max-width:none;padding-bottom:0">
+                <div class="highlight-box">
+                  <p><strong>Short version:</strong> Highlight boxes use the legal-page treatment: muted panel, 3px accent border, 6px radius, and compact body text.</p>
+                </div>
+              </div>
+              <div class="guide-card-frame">
+                <div class="faq-item">
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    Closed FAQ item
+                    <span class="faq-chevron" aria-hidden="true">▼</span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Hidden answer content.</p>
+                  </div>
+                </div>
+                <div class="faq-item open" style="margin-bottom:0">
+                  <button class="faq-question" type="button" aria-expanded="true">
+                    Open FAQ item
+                    <span class="faq-chevron" aria-hidden="true">▼</span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Open state uses the <span class="mono">.open</span> class, rotating the chevron and expanding the answer panel.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="guide-card-frame">
+                <div class="stack-frame">
+                  <div class="stack-placeholder">
+                    <span class="ss-icon">🧩</span>
+                    <span>Level Gameplay</span>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Licenses</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="guide-code">
+            <pre><code>&lt;div class="highlight-box"&gt;
+  &lt;p&gt;&lt;strong&gt;Short version:&lt;/strong&gt; Highlighted legal copy.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="faq-item open"&gt;
+  &lt;button class="faq-question" type="button"&gt;
+    Open FAQ item
+    &lt;span class="faq-chevron" aria-hidden="true"&gt;▼&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;div class="faq-answer"&gt;
+    &lt;p&gt;Expanded answer content.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="stack-frame"&gt;
+  &lt;div class="stack-placeholder"&gt;
+    &lt;span class="ss-icon"&gt;🧩&lt;/span&gt;
+    &lt;span&gt;Level Gameplay&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="footer-col"&gt;...&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <div class="section-header">
+          <div class="label">8. Footer</div>
+          <h2 class="h1">Unified site footer</h2>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-panel">
+            <div class="guide-caption">Live preview</div>
+            <div class="guide-footer-canvas">
+              <footer class="footer">
+                <div class="container">
+                  <div class="footer-top">
+                    <div class="footer-brand">
+                      <a href="index.html" class="nav-logo" style="margin-bottom:12px">
+                        <img src="images/logo-wordmark.png" alt="Pippin Plaza" class="nav-logo-img" style="height:24px" />
+                      </a>
+                      <p>We're Pippin Plaza — an indie studio obsessed with one question: why aren't there real co-op puzzle games on mobile? So we built one. 53 solo levels to master, and co-op for when you want to bring the chaos.</p>
+                      <div class="footer-social">
+                        <a href="" class="social-btn" aria-label="X / Twitter">𝕏</a>
+                        <a href="" class="social-btn" aria-label="Instagram">📷</a>
+                        <a href="" class="social-btn" aria-label="TikTok">♪</a>
+                        <a href="" class="social-btn" aria-label="YouTube">▶</a>
+                        <a href="" class="social-btn" aria-label="Discord">💬</a>
+                      </div>
+                    </div>
+                    <div class="footer-col">
+                      <h4>Game</h4>
+                      <ul>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Download</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-col">
+                      <h4>Support</h4>
+                      <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">support@pippinplaza.com</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-col">
+                      <h4>Legal</h4>
+                      <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Licenses</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="footer-bottom">
+                    <span>&copy; 2026 Pippin Plaza. All rights reserved.</span>
+                    <span>
+                      <a href="#">Privacy</a> ·
+                      <a href="#">Terms</a> ·
+                      <a href="#">Support</a> ·
+                      <a href="#">Licenses</a>
+                    </span>
+                    <span class="mono" style="font-size:0.75rem;color:var(--text-muted)">Made with ♥ &amp; teamwork</span>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+          <div class="guide-code">
+            <pre><code>&lt;footer class="footer"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="footer-top"&gt;
+      &lt;div class="footer-brand"&gt;...&lt;/div&gt;
+      &lt;div class="footer-col"&gt;...&lt;/div&gt;
+      &lt;div class="footer-col"&gt;...&lt;/div&gt;
+      &lt;div class="footer-col"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="footer-bottom"&gt;
+      &lt;span&gt;&amp;copy; 2026 Pippin Plaza. All rights reserved.&lt;/span&gt;
+      &lt;span&gt;Privacy · Terms · Support · Licenses&lt;/span&gt;
+      &lt;span class="mono"&gt;Made with ♥ &amp;amp; teamwork&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <div class="section-header">
+          <div class="label">9. Social</div>
+          <h2 class="h1">Social pills</h2>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-panel">
+            <div class="guide-caption">Live preview</div>
+            <div class="guide-social-stack">
+              <div class="footer-social" style="margin-top:0">
+                <a href="" class="social-btn" aria-label="X / Twitter">𝕏</a>
+                <a href="" class="social-btn" aria-label="Instagram">📷</a>
+                <a href="" class="social-btn" aria-label="TikTok">♪</a>
+                <a href="" class="social-btn" aria-label="YouTube">▶</a>
+                <a href="" class="social-btn" aria-label="Discord">💬</a>
+              </div>
+              <div class="footer-social" style="margin-top:0">
+                <a href="" class="social-btn guide-force-hover-social" aria-label="X / Twitter">𝕏</a>
+                <a href="" class="social-btn guide-force-hover-social" aria-label="Instagram">📷</a>
+                <a href="" class="social-btn guide-force-hover-social" aria-label="TikTok">♪</a>
+              </div>
+              <div class="footer-social" style="margin-top:0">
+                <a href="" class="social-btn guide-force-focus-social" aria-label="X / Twitter">𝕏</a>
+                <a href="" class="social-btn guide-force-focus-social" aria-label="Instagram">📷</a>
+                <a href="" class="social-btn guide-force-focus-social" aria-label="TikTok">♪</a>
+              </div>
+              <p class="guide-note">Only one social pill class is defined in the site CSS, now with both hover and focus-visible treatment.</p>
+            </div>
+          </div>
+          <div class="guide-code">
+            <pre><code>&lt;div class="footer-social"&gt;
+  &lt;a href="" class="social-btn" aria-label="X / Twitter"&gt;𝕏&lt;/a&gt;
+  &lt;a href="" class="social-btn" aria-label="Instagram"&gt;📷&lt;/a&gt;
+  &lt;a href="" class="social-btn" aria-label="TikTok"&gt;♪&lt;/a&gt;
+  &lt;a href="" class="social-btn" aria-label="YouTube"&gt;▶&lt;/a&gt;
+  &lt;a href="" class="social-btn" aria-label="Discord"&gt;💬&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;a href="" class="social-btn guide-force-focus-social"&gt;𝕏&lt;/a&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <div class="section-header">
+          <div class="label">10. Spacing</div>
+          <h2 class="h1">Tokenized and repeated spacing values</h2>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-panel">
+            <div class="guide-caption">Live preview</div>
+            <div class="guide-space-stack">
+              <div class="prose" style="max-width:none;padding-bottom:0">
+                <div class="highlight-box" style="margin:0">
+                  <p><strong>Tokenized spacing:</strong> <span class="mono">--space-1: 4px</span>, <span class="mono">--space-2: 8px</span>, <span class="mono">--space-3: 12px</span>, <span class="mono">--space-4: 16px</span>, <span class="mono">--space-5: 24px</span>, <span class="mono">--space-6: 32px</span>, <span class="mono">--space-7: 48px</span>, <span class="mono">--space-8: 64px</span>, <span class="mono">--space-9: 96px</span>.</p>
+                </div>
+              </div>
+              <div class="guide-space-row"><strong>8px</strong><div class="guide-space-bar" style="width:24px"></div><span>gap-sm, nav links, mobile menu gap</span></div>
+              <div class="guide-space-row"><strong>12px</strong><div class="guide-space-bar" style="width:36px"></div><span>buttons, labels, footer spacing</span></div>
+              <div class="guide-space-row"><strong>16px</strong><div class="guide-space-bar" style="width:48px"></div><span>grid padding, copy spacing, button gaps</span></div>
+              <div class="guide-space-row"><strong>20px</strong><div class="guide-space-bar" style="width:60px"></div><span>cards, FAQ, placeholders</span></div>
+              <div class="guide-space-row"><strong>24px</strong><div class="guide-space-bar" style="width:72px"></div><span>container padding, grids, footer bottom</span></div>
+              <div class="guide-space-row"><strong>32px</strong><div class="guide-space-bar" style="width:96px"></div><span>hero stats gap, panels, section offsets</span></div>
+              <div class="guide-space-row"><strong>40px</strong><div class="guide-space-bar" style="width:120px"></div><span>stats bar, contact card padding, last-updated margin</span></div>
+              <div class="guide-space-row"><strong>48px</strong><div class="guide-space-bar" style="width:144px"></div><span>footer spacing, CTA spacing, prose headings</span></div>
+              <div class="guide-space-row"><strong>56px</strong><div class="guide-space-bar" style="width:168px"></div><span>section headers, footer padding, top margins</span></div>
+              <div class="guide-space-row"><strong>64px</strong><div class="guide-space-bar" style="width:192px"></div><span>section-sm, page hero, desktop gaps</span></div>
+              <div class="guide-space-row"><strong>96px</strong><div class="guide-space-bar" style="width:240px"></div><span>default section vertical rhythm</span></div>
+            </div>
+          </div>
+          <div class="guide-code">
+            <pre><code>&lt;div class="highlight-box"&gt;
+  &lt;p&gt;
+    &lt;strong&gt;Tokenized spacing:&lt;/strong&gt;
+    --space-1: 4px, --space-2: 8px, --space-3: 12px,
+    --space-4: 16px, --space-5: 24px, --space-6: 32px,
+    --space-7: 48px, --space-8: 64px, --space-9: 96px
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="guide-space-row"&gt;
+  &lt;strong&gt;24px&lt;/strong&gt;
+  &lt;div class="guide-space-bar" style="width:72px"&gt;&lt;/div&gt;
+  &lt;span&gt;container padding, grids, footer bottom&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <div class="section-header">
+          <div class="label">11. Responsive</div>
+          <h2 class="h1">Media query breakpoints</h2>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-panel">
+            <div class="guide-caption">Live preview</div>
+            <div class="guide-breakpoint-stack">
+              <div class="guide-breakpoint-row"><strong>@media (min-width: 900px)</strong><span>features grid expands to 4 columns</span></div>
+              <div class="guide-breakpoint-row"><strong>@media (max-width: 1024px)</strong><span>hero collapses, footer condenses</span></div>
+              <div class="guide-breakpoint-row"><strong>@media (max-width: 768px)</strong><span>repeated in three blocks for layout, stacked cards, and hero-scroll</span></div>
+              <div class="guide-breakpoint-row"><strong>@media (max-width: 480px)</strong><span>features become single-column, stats compress again</span></div>
+            </div>
+          </div>
+          <div class="guide-code">
+            <pre><code>@media (min-width: 900px) { ... }
+@media (max-width: 1024px) { ... }
+@media (max-width: 768px) { ... }
+@media (max-width: 768px) { ... }
+@media (max-width: 480px) { ... }
+@media (max-width: 768px) { ... }</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <div class="section-header">
+          <div class="label">12. Gaps</div>
+          <h2 class="h1">Gaps &amp; opportunities</h2>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-panel">
+            <div class="guide-caption">Current-state notes</div>
+            <div class="prose" style="max-width:none;padding-bottom:0">
+              <div class="highlight-box">
+                <ul class="guide-list">
+                  <li>Interactive visibility and expansion rely on state classes such as <span class="mono">.open</span> and JS on the live site; the CSS alone does not provide a no-script behavior pattern.</li>
+                  <li>Several layout and color tweaks are applied inline in the HTML pages rather than through reusable utility or component classes.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="guide-code">
+            <pre><code>&lt;div class="highlight-box"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Interactive visibility and expansion rely on state classes and JS.&lt;/li&gt;
+    &lt;li&gt;Several layout and color tweaks still live inline in HTML.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pippin Plaza — Play together. Solve together.</title>
+  <meta name="description" content="A real co-op puzzle game for 2–4 players. Create a party, share a code, and solve 53 levels together. Available on iOS and Android." />
+  <meta name="theme-color" content="#0F1117" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Pippin Plaza" />
+  <meta property="og:url" content="https://pippinplaza.com/" />
+  <meta property="og:title" content="Pippin Plaza — Play together. Solve together." />
+  <meta property="og:description" content="A real co-op puzzle game for 2–4 players. No solo carries. Just teamwork." />
+  <meta property="og:image" content="https://pippinplaza.com/images/og-image.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@pippinplaza" />
+  <meta name="twitter:title" content="Pippin Plaza — Play together. Solve together." />
+  <meta name="twitter:description" content="A real co-op puzzle game for 2–4 players. No solo carries. Just teamwork." />
+  <meta name="twitter:image" content="https://pippinplaza.com/images/og-image.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://pippinplaza.com/" />
+
+  <!-- Favicon — uses images/favicon.png when available, falls back to SVG -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────── -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo-wordmark.png" alt="Pippin Plaza" class="nav-logo-img" />
+        </a>
+
+        <div class="nav-links">
+          <a href="#how-it-works">How It Works</a>
+          <a href="#features">Features</a>
+          <a href="support.html">Support</a>
+          <a href="press.html">Press</a>
+        </div>
+
+        <div class="nav-actions">
+          <a href="#download" class="btn btn-primary btn-sm">Download</a>
+        </div>
+
+        <button class="nav-hamburger" type="button" aria-label="Toggle menu" aria-controls="mobile-menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#how-it-works">How It Works</a>
+    <a href="#features">Features</a>
+    <a href="support.html">Support</a>
+    <a href="press.html">Press</a>
+    <a href="#download" class="btn btn-primary">Download Now</a>
+  </div>
+
+  <!-- ── Hero ───────────────────────────────── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- Left: Text -->
+        <div class="hero-content slide-in-left">
+          <div class="hero-eyebrow fade-in">
+            <span class="badge"><span class="live-dot"></span> Coming Soon</span>
+          </div>
+
+          <h1 class="display hero-title fade-in fade-in-delay-1">
+            Play<br>together.
+            <span class="line-orange">Solve together.</span>
+          </h1>
+
+          <p class="hero-desc fade-in fade-in-delay-2">
+            A real co-op puzzle game for <strong>2 to 4 players</strong>.
+            Create a party, share the 6-character code, and find out if your
+            squad can actually work together. No solo carries. No passengers.
+          </p>
+
+          <div class="hero-actions fade-in fade-in-delay-3">
+            <!-- TODO: Replace href with https://apps.apple.com/app/id<YOUR_NUMERIC_APP_ID> and remove coming-soon -->
+            <a href="#download" class="btn-store coming-soon">
+              <span class="store-icon"><img src="images/icon-appstore.png" alt="App Store" /></span>
+              <span class="store-text">
+                <span class="store-sub">Download on the</span>
+                <span class="store-name">App Store</span>
+              </span>
+            </a>
+            <!-- Google Play link ready — remove coming-soon class when app is live -->
+            <a href="https://play.google.com/store/apps/details?id=com.pippinplaza.game" class="btn-store coming-soon" target="_blank" rel="noopener">
+              <span class="store-icon"><img src="images/icon-googleplay.png" alt="Google Play" /></span>
+              <span class="store-text">
+                <span class="store-sub">Get it on</span>
+                <span class="store-name">Google Play</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="hero-stats fade-in fade-in-delay-4">
+            <div class="hero-stat">
+              <div class="hero-stat-value"><span data-count="53">53</span></div>
+              <div class="hero-stat-label">Puzzle Levels</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-value"><span data-count="4">4</span></div>
+              <div class="hero-stat-label">Players Per Party</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-value"><span data-count="10" data-suffix="s">10s</span></div>
+              <div class="hero-stat-label">Revive Window</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Landscape iPhone mockup -->
+        <div class="hero-visual slide-in-right">
+          <div class="phone-wrapper">
+            <div class="iphone-landscape">
+              <div class="iphone-notch-land"></div>
+              <div class="iphone-screen-land">
+                <!-- Drop your screenshot here: replace this placeholder with <img src="images/hero-screenshot.png" alt="Gameplay" /> -->
+                <div class="iphone-placeholder">
+                  <span class="iphone-placeholder-icon">🎮</span>
+                  <span>Drop gameplay screenshot here</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating labels -->
+            <div class="phone-float float-1">🟠 Party ready</div>
+            <div class="phone-float float-2">🔵 Player 2 joined</div>
+            <div class="phone-float float-3">🔑 Key collected!</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span class="hero-scroll-label">Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+  </section>
+
+  <!-- ── Stats Bar ───────────────────────────── -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-inner">
+        <div class="stat-item fade-in">
+          <div class="stat-num" data-count="53">53</div>
+          <div class="stat-label">Hand-crafted levels</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item fade-in fade-in-delay-1">
+          <div class="stat-num" data-count="4">4</div>
+          <div class="stat-label">Players per party</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item fade-in fade-in-delay-2">
+          <div class="stat-num">2–4</div>
+          <div class="stat-label">Co-op players</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item fade-in fade-in-delay-3">
+          <div class="stat-num">6</div>
+          <div class="stat-label">Digit party code</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item fade-in fade-in-delay-4">
+          <div class="stat-num" data-count="4">4</div>
+          <div class="stat-label">Game modes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Marquee Strip ───────────────────────── -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-content">PLAY TOGETHER <span class="marquee-sep">✦</span> SOLVE TOGETHER <span class="marquee-sep">✦</span> 53 HANDCRAFTED LEVELS <span class="marquee-sep">✦</span> 2–4 PLAYERS <span class="marquee-sep">✦</span> FREE TO PLAY <span class="marquee-sep">✦</span> 10-SECOND SELF-REVIVE <span class="marquee-sep">✦</span> 6-CHAR PARTY CODE <span class="marquee-sep">✦</span> CO-OP MODE <span class="marquee-sep">✦</span>&nbsp;</span>
+      <span class="marquee-content" aria-hidden="true">PLAY TOGETHER <span class="marquee-sep">✦</span> SOLVE TOGETHER <span class="marquee-sep">✦</span> 53 HANDCRAFTED LEVELS <span class="marquee-sep">✦</span> 2–4 PLAYERS <span class="marquee-sep">✦</span> FREE TO PLAY <span class="marquee-sep">✦</span> 10-SECOND SELF-REVIVE <span class="marquee-sep">✦</span> 6-CHAR PARTY CODE <span class="marquee-sep">✦</span> CO-OP MODE <span class="marquee-sep">✦</span>&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ── How It Works ────────────────────────── -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <div class="label">How It Works</div>
+        <h2 class="h1">Three steps. Zero excuses.</h2>
+        <p class="lead" style="max-width:520px;margin:12px auto 0">
+          Getting into a game with your friends takes about 30 seconds.
+          Escaping together might take a little longer.
+        </p>
+      </div>
+
+      <div class="grid-3 steps">
+        <div class="step fade-in">
+          <div class="step-number">01</div>
+          <div class="step-icon">🏠</div>
+          <h3>Create a Party</h3>
+          <p>Tap "Create Party" and get a 6-character code. Share it however you want — text, voice, vibes.</p>
+        </div>
+        <div class="step fade-in fade-in-delay-1">
+          <div class="step-number">02</div>
+          <div class="step-icon">🧩</div>
+          <h3>Solve Puzzles Together</h3>
+          <p>Collect coins, grab the key, open the door. Each level is designed so nobody can finish alone.</p>
+        </div>
+        <div class="step fade-in fade-in-delay-2">
+          <div class="step-number">03</div>
+          <div class="step-icon">🚪</div>
+          <h3>Everyone Exits</h3>
+          <p>Every player must reach the exit. Leave someone behind and nobody wins. Real co-op.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features ────────────────────────────── -->
+  <section class="section" id="features" style="padding-top:0">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <div class="label">Features</div>
+        <h2 class="h1">Built different.</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="card feature-card fade-in">
+          <div class="card-icon">🧩</div>
+          <h3>53 Puzzle Levels</h3>
+          <p>Hand-crafted stages that escalate in complexity. Every level needs actual coordination — not just button mashing.</p>
+        </div>
+        <div class="card feature-card fade-in fade-in-delay-1">
+          <div class="card-icon">👥</div>
+          <h3>2–4 Players</h3>
+          <p>Play with 2, 3, or 4 — every configuration works. More players means more coordination required, more chaos guaranteed.</p>
+        </div>
+        <div class="card feature-card fade-in fade-in-delay-2">
+          <div class="card-icon">🌐</div>
+          <h3>Play Online Anywhere</h3>
+          <p>No local Wi-Fi required. Powered by real-time networking — play with friends across the globe. No excuses.</p>
+        </div>
+        <div class="card feature-card fade-in fade-in-delay-3">
+          <div class="card-icon">⏱️</div>
+          <h3>Rush, Survival &amp; Marathon</h3>
+          <p>Beyond the story: race timed Rush challenges, take on the daily Survival quest gauntlet, or clear every level in one Marathon run.</p>
+        </div>
+        <div class="card feature-card fade-in">
+          <div class="card-icon">⚡</div>
+          <h3>6-Character Party Codes</h3>
+          <p>No account required. Share a code, friends join instantly. Games start in seconds, not minutes.</p>
+        </div>
+        <div class="card feature-card fade-in fade-in-delay-1">
+          <div class="card-icon">🔄</div>
+          <h3>Revive System</h3>
+          <p>Fell into a spike? You've got 10 seconds to get back on your feet before the team pays the price. Move fast.</p>
+        </div>
+        <div class="card feature-card fade-in fade-in-delay-2">
+          <div class="card-icon">🏆</div>
+          <h3>Leaderboards</h3>
+          <p>Compete for the top spots on global leaderboards. Speed, precision, teamwork — every run counts.</p>
+        </div>
+        <div class="card feature-card fade-in fade-in-delay-3">
+          <div class="card-icon">🎮</div>
+          <h3>Free to Play</h3>
+          <p>No paywalls, no subscriptions. Download and start playing immediately. Your whole squad can join for free.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Screenshots ─────────────────────────── -->
+  <!-- ── Screenshots Carousel ─────────────────── -->
+  <section class="section screenshots-section">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <div class="label">Screenshots</div>
+        <h2 class="h1">See it in action.</h2>
+        <p class="lead" style="max-width:480px;margin:12px auto 0">
+          Screenshots coming soon. Follow us on social to see the first gameplay previews.
+        </p>
+      </div>
+
+      <!-- Stacked Cards -->
+      <div class="stack-container fade-in">
+        <div class="stack-cards">
+          <div class="stack-deck">
+            <div class="stack-card" data-index="0">
+              <div class="stack-frame">
+                <div class="stack-placeholder">
+                  <span class="ss-icon">🧩</span>
+                  <span>Level Gameplay</span>
+                </div>
+                <!-- Replace placeholder with: <img src="images/ss-1.png" alt="Level Gameplay" /> -->
+              </div>
+              <div class="stack-caption">Level 12 — The Carry</div>
+            </div>
+            <div class="stack-card" data-index="1">
+              <div class="stack-frame">
+                <div class="stack-placeholder">
+                  <span class="ss-icon">🏠</span>
+                  <span>Party Lobby</span>
+                </div>
+              </div>
+              <div class="stack-caption">4-Player Party</div>
+            </div>
+            <div class="stack-card" data-index="2">
+              <div class="stack-frame">
+                <div class="stack-placeholder">
+                  <span class="ss-icon">🔑</span>
+                  <span>Key Puzzle</span>
+                </div>
+              </div>
+              <div class="stack-caption">Key &amp; Door Mechanic</div>
+            </div>
+            <div class="stack-card" data-index="3">
+              <div class="stack-frame">
+                <div class="stack-placeholder">
+                  <span class="ss-icon">🏆</span>
+                  <span>Leaderboard</span>
+                </div>
+              </div>
+              <div class="stack-caption">Top Runs</div>
+            </div>
+            <div class="stack-card" data-index="4">
+              <div class="stack-frame">
+                <div class="stack-placeholder">
+                  <span class="ss-icon">⏱️</span>
+                  <span>Rush &amp; Survival</span>
+                </div>
+              </div>
+              <div class="stack-caption">Rush &amp; Survival Modes</div>
+            </div>
+            <div class="stack-card" data-index="5">
+              <div class="stack-frame">
+                <div class="stack-placeholder">
+                  <span class="ss-icon">🎮</span>
+                  <span>Solo Mode</span>
+                </div>
+              </div>
+              <div class="stack-caption">53 Solo Levels</div>
+            </div>
+          </div>
+          <div class="stack-progress">
+            <div class="stack-progress-bar"></div>
+          </div>
+          <p class="stack-hint">Scroll to reveal screenshots</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Download CTA ────────────────────────── -->
+  <section class="section cta-section" id="download">
+    <div class="container">
+      <div class="label fade-in">Download</div>
+      <h2 class="h1 fade-in fade-in-delay-1" style="margin-top:12px">
+        Your squad is waiting.
+      </h2>
+      <p class="fade-in fade-in-delay-2">
+        Free to download. No account required. Just grab your friends and a party code.
+      </p>
+      <div class="store-badges fade-in fade-in-delay-3">
+        <!-- TODO: Replace href with https://apps.apple.com/app/id<YOUR_NUMERIC_APP_ID> and remove coming-soon -->
+        <a href="#" class="btn-store coming-soon">
+          <span class="store-icon"><img src="images/icon-appstore.png" alt="App Store" /></span>
+          <span class="store-text">
+            <span class="store-sub">Download on the</span>
+            <span class="store-name">App Store</span>
+          </span>
+        </a>
+        <!-- Google Play link ready — remove coming-soon class when app is live -->
+        <a href="https://play.google.com/store/apps/details?id=com.pippinplaza.game" class="btn-store coming-soon" target="_blank" rel="noopener">
+          <span class="store-icon"><img src="images/icon-googleplay.png" alt="Google Play" /></span>
+          <span class="store-text">
+            <span class="store-sub">Get it on</span>
+            <span class="store-name">Google Play</span>
+          </span>
+        </a>
+      </div>
+      <p class="coming-soon-note fade-in fade-in-delay-4">// Store links live soon — follow us for launch date</p>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:12px">
+            <img src="images/logo-wordmark.png" alt="Pippin Plaza" class="nav-logo-img" style="height:24px" />
+          </a>
+          <p>We're Pippin Plaza — an indie studio obsessed with one question: why aren't there real co-op puzzle games on mobile? So we built one. 53 solo levels to master, and co-op for when you want to bring the chaos.</p>
+          <div class="footer-social">
+            <a href="" class="social-btn" aria-label="X / Twitter">𝕏</a>
+            <a href="" class="social-btn" aria-label="Instagram">📷</a>
+            <a href="" class="social-btn" aria-label="TikTok">♪</a>
+            <a href="" class="social-btn" aria-label="YouTube">▶</a>
+            <a href="" class="social-btn" aria-label="Discord">💬</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Game</h4>
+          <ul>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="press.html">Press Kit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="support.html">FAQ</a></li>
+            <li><a href="support.html#contact">Contact Us</a></li>
+            <li><a href="mailto:support@pippinplaza.com">support@pippinplaza.com</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="licenses.html">Licenses</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span class="current-year"></span> Pippin Plaza. All rights reserved.</span>
+        <span>
+          <a href="privacy.html">Privacy</a> ·
+          <a href="terms.html">Terms</a> ·
+          <a href="support.html">Support</a> ·
+          <a href="licenses.html">Licenses</a>
+        </span>
+        <span class="mono" style="font-size:0.75rem;color:var(--text-muted)">Made with ♥ &amp; teamwork</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
