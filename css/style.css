@@ -358,7 +358,7 @@ h4 { font-size: var(--text-h4); }
 }
 .nav-logo span { color: var(--accent-primary); }
 .nav-logo-img {
-  height: 28px;
+  height: 58px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -1176,8 +1176,10 @@ h4 { font-size: var(--text-h4); }
 
   .nav-links, .nav-actions { display: none; }
   .nav-hamburger { display: flex; }
+  .nav-inner { position: relative; justify-content: flex-end; }
+  .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); }
 
-  .hero { padding: 100px 0 48px; }
+  .hero { padding: 130px 0 48px; }
   .hero-inner { gap: 24px; }
   .hero-desc { font-size: 0.95rem; margin-bottom: 24px; }
   .hero-title { margin-bottom: 12px; }
