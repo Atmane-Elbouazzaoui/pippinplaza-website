@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pippin Plaza — Play together. Solve together.</title>
-  <meta name="description" content="A real co-op puzzle game for 2–4 players. Create a party, share a code, and solve 53 levels together. Available on iOS and Android." />
+  <meta name="description" content="A real co-op puzzle game for 2–4 players. Create a party, share a code, and solve 53 levels together. Coming to iPhone, iPad and Android." />
   <meta name="theme-color" content="#0F1117" />
 
   <!-- Open Graph -->
@@ -14,6 +14,9 @@
   <meta property="og:title" content="Pippin Plaza — Play together. Solve together." />
   <meta property="og:description" content="A real co-op puzzle game for 2–4 players. No solo carries. Just teamwork." />
   <meta property="og:image" content="https://pippinplaza.com/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Pippin Plaza illustrated co-op puzzle key art" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -21,6 +24,7 @@
   <meta name="twitter:title" content="Pippin Plaza — Play together. Solve together." />
   <meta name="twitter:description" content="A real co-op puzzle game for 2–4 players. No solo carries. Just teamwork." />
   <meta name="twitter:image" content="https://pippinplaza.com/images/og-image.png" />
+  <meta name="twitter:image:alt" content="Pippin Plaza illustrated co-op puzzle key art" />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://pippinplaza.com/" />
@@ -50,7 +54,7 @@
         </div>
 
         <div class="nav-actions">
-          <a href="#download" class="btn btn-primary btn-sm">Download</a>
+          <a href="#download" class="btn btn-primary btn-sm">Launch Info</a>
         </div>
 
         <button class="nav-hamburger" type="button" aria-label="Toggle menu" aria-controls="mobile-menu" aria-expanded="false">
@@ -66,7 +70,7 @@
     <a href="#features">Features</a>
     <a href="support.html">Support</a>
     <a href="press.html">Press</a>
-    <a href="#download" class="btn btn-primary">Download Now</a>
+    <a href="#download" class="btn btn-primary">Launch Info</a>
   </div>
 
   <!-- ── Hero ───────────────────────────────── -->
@@ -91,23 +95,15 @@
             squad can actually work together. No solo carries. No passengers.
           </p>
 
-          <div class="hero-actions fade-in fade-in-delay-3">
-            <!-- TODO: Replace href with https://apps.apple.com/app/id<YOUR_NUMERIC_APP_ID> and remove coming-soon -->
-            <a href="#download" class="btn-store coming-soon">
-              <span class="store-icon"><img src="images/icon-appstore.png" alt="App Store" /></span>
-              <span class="store-text">
-                <span class="store-sub">Download on the</span>
-                <span class="store-name">App Store</span>
-              </span>
-            </a>
-            <!-- Google Play link ready — remove coming-soon class when app is live -->
-            <a href="https://play.google.com/store/apps/details?id=com.pippinplaza.game" class="btn-store coming-soon" target="_blank" rel="noopener">
-              <span class="store-icon"><img src="images/icon-googleplay.png" alt="Google Play" /></span>
-              <span class="store-text">
-                <span class="store-sub">Get it on</span>
-                <span class="store-name">Google Play</span>
-              </span>
-            </a>
+          <div class="launch-platforms hero-actions fade-in fade-in-delay-3" aria-label="Launch platforms">
+            <div class="launch-platform">
+              <span class="launch-platform-kicker">Coming soon</span>
+              <span class="launch-platform-name">iPhone &amp; iPad</span>
+            </div>
+            <div class="launch-platform">
+              <span class="launch-platform-kicker">Coming soon</span>
+              <span class="launch-platform-name">Android</span>
+            </div>
           </div>
 
           <div class="hero-stats fade-in fade-in-delay-4">
@@ -126,24 +122,23 @@
           </div>
         </div>
 
-        <!-- Right: Landscape iPhone mockup -->
+        <!-- Right: Real gameplay in a neutral frame -->
         <div class="hero-visual slide-in-right">
           <div class="phone-wrapper">
-            <div class="iphone-landscape">
-              <div class="iphone-notch-land"></div>
-              <div class="iphone-screen-land">
-                <!-- Drop your screenshot here: replace this placeholder with <img src="images/hero-screenshot.png" alt="Gameplay" /> -->
-                <div class="iphone-placeholder">
-                  <span class="iphone-placeholder-icon">🎮</span>
-                  <span>Drop gameplay screenshot here</span>
-                </div>
+            <div class="gameplay-window">
+              <div class="gameplay-window-bar">
+                <span class="gameplay-window-proof"><span class="proof-dot"></span>Actual gameplay</span>
+                <span>Rush Quest 42</span>
+              </div>
+              <div class="gameplay-screen">
+                <img src="images/hero-gameplay.jpg" width="1800" height="827" alt="Four Pippins stacking crates during Rush Quest 42" fetchpriority="high" />
               </div>
             </div>
 
-            <!-- Floating labels -->
-            <div class="phone-float float-1">🟠 Party ready</div>
-            <div class="phone-float float-2">🔵 Player 2 joined</div>
-            <div class="phone-float float-3">🔑 Key collected!</div>
+            <!-- Website annotations, kept outside the gameplay frame -->
+            <div class="phone-float float-1">4 Pippins. 1 exit.</div>
+            <div class="phone-float float-2">Stack together</div>
+            <div class="phone-float float-3">Grab the key</div>
           </div>
         </div>
 
@@ -291,7 +286,7 @@
         <div class="label">Screenshots</div>
         <h2 class="h1">See it in action.</h2>
         <p class="lead" style="max-width:480px;margin:12px auto 0">
-          Screenshots coming soon. Follow us on social to see the first gameplay previews.
+          Real game screens captured from the iPhone build — UI, Pippins, puzzles and all.
         </p>
       </div>
 
@@ -301,58 +296,39 @@
           <div class="stack-deck">
             <div class="stack-card" data-index="0">
               <div class="stack-frame">
-                <div class="stack-placeholder">
-                  <span class="ss-icon">🧩</span>
-                  <span>Level Gameplay</span>
-                </div>
-                <!-- Replace placeholder with: <img src="images/ss-1.png" alt="Level Gameplay" /> -->
+                <img src="images/screenshot-modes.jpg" width="1800" height="828" alt="Pippin Plaza mode selection showing Rush, Survival and Marathon" loading="lazy" />
               </div>
-              <div class="stack-caption">Level 12 — The Carry</div>
+              <div class="stack-caption">Rush, Survival &amp; Marathon</div>
             </div>
             <div class="stack-card" data-index="1">
               <div class="stack-frame">
-                <div class="stack-placeholder">
-                  <span class="ss-icon">🏠</span>
-                  <span>Party Lobby</span>
-                </div>
+                <img src="images/screenshot-online-party.jpg" width="1800" height="828" alt="Online party lobby with a six-character party code" loading="lazy" />
               </div>
-              <div class="stack-caption">4-Player Party</div>
+              <div class="stack-caption">Play Online With Friends</div>
             </div>
             <div class="stack-card" data-index="2">
               <div class="stack-frame">
-                <div class="stack-placeholder">
-                  <span class="ss-icon">🔑</span>
-                  <span>Key Puzzle</span>
-                </div>
+                <img src="images/screenshot-coop.jpg" width="1800" height="828" alt="Four Pippins working through a co-op puzzle level" loading="lazy" />
               </div>
-              <div class="stack-caption">Key &amp; Door Mechanic</div>
+              <div class="stack-caption">Built for 2–4 Players</div>
             </div>
             <div class="stack-card" data-index="3">
               <div class="stack-frame">
-                <div class="stack-placeholder">
-                  <span class="ss-icon">🏆</span>
-                  <span>Leaderboard</span>
-                </div>
+                <img src="images/screenshot-exit.jpg" width="1800" height="828" alt="Pippins approaching the exit door together" loading="lazy" />
               </div>
-              <div class="stack-caption">Top Runs</div>
+              <div class="stack-caption">Reach the Exit Together</div>
             </div>
             <div class="stack-card" data-index="4">
               <div class="stack-frame">
-                <div class="stack-placeholder">
-                  <span class="ss-icon">⏱️</span>
-                  <span>Rush &amp; Survival</span>
-                </div>
+                <img src="images/screenshot-traps.jpg" width="1800" height="828" alt="Players navigating a hazard-filled Pippin Plaza puzzle" loading="lazy" />
               </div>
-              <div class="stack-caption">Rush &amp; Survival Modes</div>
+              <div class="stack-caption">Dodge Traps Together</div>
             </div>
             <div class="stack-card" data-index="5">
               <div class="stack-frame">
-                <div class="stack-placeholder">
-                  <span class="ss-icon">🎮</span>
-                  <span>Solo Mode</span>
-                </div>
+                <img src="images/screenshot-stack.jpg" width="1800" height="828" alt="Players stacking crates to reach the key" loading="lazy" />
               </div>
-              <div class="stack-caption">53 Solo Levels</div>
+              <div class="stack-caption">Stack to Grab the Key</div>
             </div>
           </div>
           <div class="stack-progress">
@@ -365,35 +341,27 @@
     </div>
   </section>
 
-  <!-- ── Download CTA ────────────────────────── -->
+  <!-- ── Launch CTA ──────────────────────────── -->
   <section class="section cta-section" id="download">
     <div class="container">
-      <div class="label fade-in">Download</div>
+      <div class="label fade-in">Launch Status</div>
       <h2 class="h1 fade-in fade-in-delay-1" style="margin-top:12px">
-        Your squad is waiting.
+        Your squad is almost ready.
       </h2>
       <p class="fade-in fade-in-delay-2">
-        Free to download. No account required. Just grab your friends and a party code.
+        Pippin Plaza is preparing for launch on iPhone, iPad and Android. No account required — just your friends and a party code.
       </p>
-      <div class="store-badges fade-in fade-in-delay-3">
-        <!-- TODO: Replace href with https://apps.apple.com/app/id<YOUR_NUMERIC_APP_ID> and remove coming-soon -->
-        <a href="#" class="btn-store coming-soon">
-          <span class="store-icon"><img src="images/icon-appstore.png" alt="App Store" /></span>
-          <span class="store-text">
-            <span class="store-sub">Download on the</span>
-            <span class="store-name">App Store</span>
-          </span>
-        </a>
-        <!-- Google Play link ready — remove coming-soon class when app is live -->
-        <a href="https://play.google.com/store/apps/details?id=com.pippinplaza.game" class="btn-store coming-soon" target="_blank" rel="noopener">
-          <span class="store-icon"><img src="images/icon-googleplay.png" alt="Google Play" /></span>
-          <span class="store-text">
-            <span class="store-sub">Get it on</span>
-            <span class="store-name">Google Play</span>
-          </span>
-        </a>
+      <div class="launch-platforms launch-platforms-centered fade-in fade-in-delay-3" aria-label="Launch platforms">
+        <div class="launch-platform">
+          <span class="launch-platform-kicker">Coming soon</span>
+          <span class="launch-platform-name">iPhone &amp; iPad</span>
+        </div>
+        <div class="launch-platform">
+          <span class="launch-platform-kicker">Coming soon</span>
+          <span class="launch-platform-name">Android</span>
+        </div>
       </div>
-      <p class="coming-soon-note fade-in fade-in-delay-4">// Store links live soon — follow us for launch date</p>
+      <p class="coming-soon-note fade-in fade-in-delay-4">// Official store links will appear here when the public listings are live</p>
     </div>
   </section>
 
