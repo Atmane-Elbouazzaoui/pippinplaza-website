@@ -358,7 +358,7 @@ h4 { font-size: var(--text-h4); }
 }
 .nav-logo span { color: var(--accent-primary); }
 .nav-logo-img {
-  height: 58px;
+  height: 76px;
   width: auto;
   display: block;
   object-fit: contain;
