@@ -47,6 +47,19 @@
           <a href="press.html">Press</a>
         </div>
         <div class="nav-actions">
+          <details class="lang-switch">
+            <summary aria-label="Language: English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 0 0 20"/></svg><span>EN</span></summary>
+            <ul class="lang-menu">
+              <li><a href="licenses.html" hreflang="en" lang="en" aria-current="true">English</a></li>
+              <li><a href="fr/support.html" hreflang="fr" lang="fr">Français</a></li>
+              <li><a href="de/support.html" hreflang="de" lang="de">Deutsch</a></li>
+              <li><a href="es/support.html" hreflang="es" lang="es">Español</a></li>
+              <li><a href="pt-br/support.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+              <li><a href="ja/support.html" hreflang="ja" lang="ja">日本語</a></li>
+              <li><a href="ko/support.html" hreflang="ko" lang="ko">한국어</a></li>
+              <li><a href="zh-hans/support.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+            </ul>
+          </details>
           <a href="index.html#download" class="btn btn-primary btn-sm">Download</a>
         </div>
         <button class="nav-hamburger" aria-label="Toggle menu">
@@ -61,6 +74,16 @@
     <a href="support.html">Support</a>
     <a href="press.html">Press</a>
     <a href="index.html#download" class="btn btn-primary">Download Now</a>
+    <div class="mobile-lang" role="group" aria-label="Language">
+      <a href="licenses.html" hreflang="en" lang="en" aria-current="true">English</a>
+      <a href="fr/support.html" hreflang="fr" lang="fr">Français</a>
+      <a href="de/support.html" hreflang="de" lang="de">Deutsch</a>
+      <a href="es/support.html" hreflang="es" lang="es">Español</a>
+      <a href="pt-br/support.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+      <a href="ja/support.html" hreflang="ja" lang="ja">日本語</a>
+      <a href="ko/support.html" hreflang="ko" lang="ko">한국어</a>
+      <a href="zh-hans/support.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+    </div>
   </div>
 
   <!-- Page Hero -->
@@ -76,7 +99,7 @@
   <div class="container">
     <div class="prose">
 
-      <p class="last-updated">Last updated: July 2, 2026</p>
+      <p class="last-updated">Last updated: September 15, 2026</p>
 
       <div class="highlight-box">
         <p>Pippin Plaza is built on the shoulders of great open source work. This page lists all third-party components, their authors, and the terms under which they are used. We are grateful to every project listed here.</p>
@@ -113,7 +136,7 @@
 
       <h3>Unity Authentication (<code>com.unity.services.authentication</code>)</h3>
       <p><strong>Unity Technologies ApS</strong><br>
-      Provides anonymous device-based authentication used to associate leaderboard entries with a player's device. No account, email, or personal data is required.</p>
+      Assigns a pseudonymous player ID used for leaderboards and online services. No email address or real name is required to play. Purchase-linked accounts are covered under Purchases &amp; Accounts below.</p>
       <p>License &amp; Privacy: <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">unity.com/legal/privacy-policy</a></p>
 
       <h3>Unity Services Core (<code>com.unity.services.core</code>)</h3>
@@ -143,6 +166,183 @@
       <p><strong>Google LLC</strong><br>
       Android library used to read the device advertising ID (GAID) for ad delivery and measurement, honoring the user's Android ad settings.</p>
       <p>Terms: <a href="https://developers.google.com/android/guides/overview" target="_blank" rel="noopener">Google Play services (Android SDK License Agreement)</a></p>
+
+      <!-- ── PURCHASES & ACCOUNTS ── -->
+      <h2>Purchases &amp; Accounts</h2>
+
+      <h3>Unity In-App Purchasing (<code>com.unity.purchasing</code>)</h3>
+      <p><strong>Unity Technologies ApS</strong><br>
+      Connects the Game to the App Store to process optional in-app purchases.</p>
+      <p>Terms: <a href="https://unity.com/legal/iap-additional-terms" target="_blank" rel="noopener">Unity IAP Additional Terms</a></p>
+      <p>Unity In-App Purchasing includes these third-party components:</p>
+      <ul>
+        <li><strong>Apple StoreKit 2</strong> — Copyright © 2023 Apple Computer, Inc. — Apache License 2.0</li>
+        <li><strong>Google Play Billing Library 8.3.0</strong> — Copyright © 2023 Google, LLC — Apache License 2.0</li>
+        <li><strong>ASN.1-Editor</strong> — public domain</li>
+      </ul>
+
+      <h3>PlayFab Unity SDK</h3>
+      <p><strong>PlayFab Inc. (a Microsoft company)</strong><br>
+      Client SDK that connects the purchase-linked game account and virtual inventory to Microsoft PlayFab.</p>
+      <div class="highlight-box" style="border-left-color:var(--border-color)">
+        <p class="mono" style="font-size:0.8rem">Apache License 2.0 · Copyright 2015 PlayFab Inc.<br>
+        Full license: <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener" style="color:var(--accent-primary)">apache.org/licenses/LICENSE-2.0</a></p>
+      </div>
+
+      <p>The PlayFab Unity SDK includes <strong>SimpleJson</strong> by Nathan Totten, Jim Zimmerman and Prabir Shrestha, used under the MIT License:</p>
+      <div class="highlight-box" style="border-left-color:var(--border-color)">
+        <p class="mono" style="font-size:0.8rem;white-space:pre-wrap">MIT License
+
+Copyright (c) 2011, The Outercurve Foundation
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+      </div>
+
+      <h3>Sign in with Apple for Unity</h3>
+      <p><strong>Daniel Lupiañez Casares</strong><br>
+      Unity plugin for Sign in with Apple, used to link Starter Bundle and Diamond purchases to a recoverable account.</p>
+      <div class="highlight-box" style="border-left-color:var(--border-color)">
+        <p class="mono" style="font-size:0.8rem;white-space:pre-wrap">MIT License
+
+Copyright (c) 2019 Daniel Lupiañez Casares
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+      </div>
+
+      <h3>External Dependency Manager for Unity</h3>
+      <p><strong>Google LLC</strong><br>
+      Build tool that resolves the native iOS and Android libraries required by the SDKs listed on this page.</p>
+      <div class="highlight-box" style="border-left-color:var(--border-color)">
+        <p class="mono" style="font-size:0.8rem">Apache License 2.0 · Copyright (C) 2014 Google Inc.<br>
+        Full license: <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener" style="color:var(--accent-primary)">apache.org/licenses/LICENSE-2.0</a></p>
+      </div>
+
+      <!-- ── COMMERCE BACKEND ── -->
+      <h2>Commerce Backend</h2>
+      <p>These services and libraries run on our servers, not inside the app. They validate App Store purchases, deliver purchased items, and handle account deletion.</p>
+
+      <h3>Microsoft PlayFab</h3>
+      <p><strong>Microsoft Corporation</strong><br>
+      Hosts the purchase-linked game account and virtual inventory.</p>
+      <p>Terms &amp; Privacy: <a href="https://www.microsoft.com/licensing/terms/" target="_blank" rel="noopener">Microsoft Product Terms</a> · <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a></p>
+
+      <h3>Microsoft Azure (Functions, Cosmos DB)</h3>
+      <p><strong>Microsoft Corporation</strong><br>
+      Hosts server-side purchase validation, purchase-integrity records, and account deletion.</p>
+      <p>Terms &amp; Privacy: <a href="https://azure.microsoft.com/support/legal/" target="_blank" rel="noopener">Microsoft Azure legal information</a> · <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a></p>
+
+      <h3>Azure SDK for JavaScript (<code>@azure/cosmos</code>, <code>@azure/identity</code>)</h3>
+      <p><strong>Microsoft Corporation</strong><br>
+      Server libraries used to access the commerce database and authenticate with Azure. Source: <a href="https://github.com/Azure/azure-sdk-for-js" target="_blank" rel="noopener">github.com/Azure/azure-sdk-for-js</a></p>
+      <div class="highlight-box" style="border-left-color:var(--border-color)">
+        <p class="mono" style="font-size:0.8rem;white-space:pre-wrap">MIT License
+
+Copyright (c) Microsoft Corporation
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+      </div>
+
+      <h3>Azure Functions Node.js library (<code>@azure/functions</code>)</h3>
+      <p><strong>.NET Foundation</strong><br>
+      Runtime library for the server-side commerce functions. Source: <a href="https://github.com/Azure/azure-functions-nodejs-library" target="_blank" rel="noopener">github.com/Azure/azure-functions-nodejs-library</a></p>
+      <div class="highlight-box" style="border-left-color:var(--border-color)">
+        <p class="mono" style="font-size:0.8rem;white-space:pre-wrap">MIT License
+
+Copyright (c) .NET Foundation. All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+      </div>
+
+      <h3>App Store Server Library for Node.js (<code>@apple/app-store-server-library</code>)</h3>
+      <p><strong>Apple Inc.</strong><br>
+      Server library used to verify App Store transactions. Source: <a href="https://github.com/apple/app-store-server-library-node" target="_blank" rel="noopener">github.com/apple/app-store-server-library-node</a></p>
+      <div class="highlight-box" style="border-left-color:var(--border-color)">
+        <p class="mono" style="font-size:0.8rem;white-space:pre-wrap">MIT License
+
+Copyright 2023 Apple Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+      </div>
 
       <!-- ── JSON SERIALIZATION ── -->
       <h2>Serialization</h2>

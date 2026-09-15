@@ -189,6 +189,20 @@ document.addEventListener('DOMContentLoaded', () => {
     updateStack();
   }
 
+  // ── Language switcher ───────────────────────
+  const langSwitch = document.querySelector('.lang-switch');
+  if (langSwitch) {
+    document.addEventListener('click', e => {
+      if (!langSwitch.contains(e.target)) langSwitch.open = false;
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && langSwitch.open) {
+        langSwitch.open = false;
+        langSwitch.querySelector('summary').focus();
+      }
+    });
+  }
+
   // ── Current year in footer ──────────────────
   document.querySelectorAll('.current-year').forEach(el => {
     el.textContent = new Date().getFullYear();

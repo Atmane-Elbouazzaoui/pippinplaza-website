@@ -1501,3 +1501,78 @@ body::after {
   0%, 100% { opacity: 0.45; }
   50%       { opacity: 1; }
 }
+
+/* ============================================
+   LOCALIZATION
+   ============================================ */
+html:not(:lang(en)) {
+  --font-display: 'DM Sans', system-ui, -apple-system, 'Hiragino Sans', 'PingFang SC', 'Apple SD Gothic Neo', 'Noto Sans CJK JP', sans-serif;
+}
+.lang-switch { position: relative; }
+.lang-switch summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: color 0.2s, background 0.2s;
+}
+.lang-switch summary::-webkit-details-marker { display: none; }
+.lang-switch summary:hover,
+.lang-switch[open] summary { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+.lang-switch summary:focus-visible { outline: 3px solid var(--accent-primary); outline-offset: 3px; }
+.lang-switch summary svg { width: 16px; height: 16px; flex-shrink: 0; }
+.lang-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 200px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: rgba(15,17,23,0.97);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  z-index: 101;
+}
+.lang-menu a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.lang-menu a:hover { background: var(--bg-secondary); color: var(--text-primary); }
+.lang-menu a:focus-visible { outline: 3px solid var(--accent-primary); outline-offset: -3px; }
+.lang-menu a[aria-current],
+.mobile-menu .mobile-lang a[aria-current] { color: var(--accent-primary); }
+.mobile-lang {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+}
+.mobile-menu .mobile-lang a { font-size: 0.9rem; padding: 8px 12px; }
+.translation-notice {
+  max-width: 760px;
+  margin: 0 auto 40px;
+  padding: 14px 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent-cool);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.translation-notice a { color: var(--accent-primary); }
