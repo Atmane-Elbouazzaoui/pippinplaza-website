@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pippinplaza.game",
+      "sha256_cert_fingerprints": [
+        "86:D3:3A:D7:6B:97:5B:06:3B:45:6E:F1:8D:AA:5A:41:E9:99:75:2E:E6:57:A0:6A:91:97:77:D6:40:75:C9:07"
+      ]
+    }
+  }
+]

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Join a party</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center;
+      background: #f8efae; color: #17152f; }
+    main { box-sizing: border-box; width: min(92vw, 32rem); padding: 2rem;
+      background: white; border: 3px solid #17152f; border-radius: 1rem; text-align: center; }
+    h1 { margin-top: 0; }
+    strong { display: block; font-size: 2rem; letter-spacing: .12em; margin: 1rem 0; }
+    a, button { box-sizing: border-box; display: block; width: 100%; margin-top: .75rem;
+      padding: .85rem; border: 2px solid #17152f; border-radius: .6rem;
+      background: #302b70; color: white; font: inherit; text-decoration: none; cursor: pointer; }
+    button { background: white; color: #17152f; }
+    small { display: block; margin-top: 1rem; line-height: 1.4; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Join this party</h1>
+    <p id="message">Checking your invitation…</p>
+    <strong id="code" hidden></strong>
+    <p id="region" hidden></p>
+    <a id="store" href="https://apps.apple.com/app/id6787434739">Get the game on the App Store</a>
+    <button id="copy" type="button" hidden>Copy invitation link</button>
+    <small>After installing, open the original invitation again. A party code alone may not work if your friend is in another region.</small>
+  </main>
+  <script>
+    (() => {
+      const params = new URLSearchParams(location.search);
+      const code = params.get('code');
+      const region = params.get('region');
+      const version = params.get('version');
+      const room = params.get('room');
+      const cluster = params.get('cluster');
+      const keys = [...params.keys()];
+      const valid = keys.length >= 4 && keys.length <= 5 &&
+        keys.every((key) => ['code', 'region', 'version', 'room', 'cluster'].includes(key)) &&
+        new Set(keys).size === keys.length &&
+        /^[A-Z0-9]{6}$/.test(code || '') && /^[a-z]{2,8}$/.test(region || '') &&
+        /^[A-Za-z0-9._-]{1,32}$/.test(version || '') &&
+        /^[a-fA-F0-9]{32}$/.test(room || '') &&
+        (cluster === null || /^[A-Za-z0-9._-]{0,32}$/.test(cluster));
+      const message = document.getElementById('message');
+      if (!valid) {
+        message.textContent = 'This party link is invalid. Ask your friend for a new link.';
+        return;
+      }
+      document.getElementById('code').textContent = code;
+      document.getElementById('code').hidden = false;
+      const regionLabel = document.getElementById('region');
+      regionLabel.textContent = 'Region: ' + region + (cluster ? ' / ' + cluster : '');
+      regionLabel.hidden = false;
+      const copy = document.getElementById('copy');
+      copy.hidden = false;
+      copy.addEventListener('click', async () => {
+        try { await navigator.clipboard.writeText(location.href); copy.textContent = 'Link copied'; }
+        catch { copy.textContent = 'Use the original invitation message'; }
+      });
+      if (/Android/i.test(navigator.userAgent)) {
+        const store = document.getElementById('store');
+        store.href = '/';
+        store.textContent = 'Android release information';
+        message.textContent = 'The Android store version is coming soon. Keep this invitation for when it is available.';
+        return;
+      }
+      message.textContent = 'Opening the App Store. Keep this invitation to join after installing.';
+      const storageKey = 'party-store-redirect:' + location.search;
+      let alreadyRedirected = false;
+      try { alreadyRedirected = sessionStorage.getItem(storageKey) === '1'; }
+      catch { /* Browsers may disable session storage. */ }
+      if (alreadyRedirected) {
+        message.textContent = 'Use the App Store button if you need to install the game.';
+        return;
+      }
+      const timer = setTimeout(() => {
+        try { sessionStorage.setItem(storageKey, '1'); }
+        catch { /* The visible store button remains available. */ }
+        location.assign(document.getElementById('store').href);
+      }, 2400);
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) clearTimeout(timer);
+      });
+    })();
+  </script>
+</body>
+</html>
