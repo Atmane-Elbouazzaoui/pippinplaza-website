@@ -1,34 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Join a party</title>
-  <style>
-    :root { color-scheme: light; font-family: system-ui, sans-serif; }
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center;
-      background: #f8efae; color: #17152f; }
-    main { box-sizing: border-box; width: min(92vw, 32rem); padding: 2rem;
-      background: white; border: 3px solid #17152f; border-radius: 1rem; text-align: center; }
-    h1 { margin-top: 0; }
-    strong { display: block; font-size: 2rem; letter-spacing: .12em; margin: 1rem 0; }
-    a, button { box-sizing: border-box; display: block; width: 100%; margin-top: .75rem;
-      padding: .85rem; border: 2px solid #17152f; border-radius: .6rem;
-      background: #302b70; color: white; font: inherit; text-decoration: none; cursor: pointer; }
-    button { background: white; color: #17152f; }
-    small { display: block; margin-top: 1rem; line-height: 1.4; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Play Together — Party Invitations | Pippin Plaza</title>
+  <meta name="description" content="Bring your Pippins. Open a friend's party invitation and get ready for your next co-op puzzle adventure in Pippin Plaza.">
+  <meta name="theme-color" content="#FFF7EC">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pippin Plaza">
+  <meta property="og:title" content="Better together. Join your Pippins.">
+  <meta property="og:description" content="A little teamwork. A lot of adventure. Your next Pippin Plaza co-op session starts with a party invitation.">
+  <meta property="og:image" content="https://pippinplaza.com/images/screenshot-coop-v2.png">
+  <meta property="og:image:alt" content="Pippin Plaza four-player co-op gameplay">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/party/style.css">
 </head>
-<body>
-  <main>
-    <h1>Join this party</h1>
-    <p id="message">Checking your invitation…</p>
-    <strong id="code" hidden></strong>
-    <p id="region" hidden></p>
-    <a id="store" href="https://apps.apple.com/app/id6787434739">Get the game on the App Store</a>
-    <button id="copy" type="button" hidden>Copy invitation link</button>
-    <small>After installing, open the original invitation again. A party code alone may not work if your friend is in another region.</small>
+<body class="party-page">
+  <a class="party-skip-link" href="#main-content">Skip to invitation</a>
+
+  <header class="party-header">
+    <nav class="container party-navigation" aria-label="Main navigation">
+      <a href="/" class="nav-logo party-brand" aria-label="Pippin Plaza home">
+        <img src="/images/logo-wordmark.png" alt="Pippin Plaza" class="nav-logo-img">
+      </a>
+      <div class="party-navigation-links">
+        <a href="/support.html" class="party-support-link">Need a hand?</a>
+        <a href="/" class="btn btn-secondary btn-sm">Explore the game <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="party-hero" aria-labelledby="party-heading">
+      <div class="container party-hero-layout">
+        <div class="party-intro">
+          <span class="badge badge-cool party-eyebrow">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></svg>
+            Made for playing together
+          </span>
+          <h1 id="party-heading" class="party-title">Better<br><span>together.</span></h1>
+          <p class="party-description">A little teamwork. A lot of adventure.<br>Bring your Pippins and make the next quest a shared one.</p>
+          <div class="party-facts" aria-label="Game highlights">
+            <span>2–4 players</span><span class="party-fact-divider" aria-hidden="true"></span><span>Online co-op</span><span class="party-fact-divider" aria-hidden="true"></span><span>Free to download</span>
+          </div>
+
+        </div>
+
+        <article class="party-invitation" aria-labelledby="invitation-heading">
+          <div class="party-invitation-top">
+            <img src="/images/pippin-plaza-app-icon.png" width="64" height="64" alt="" class="party-app-icon">
+            <div><span class="party-card-eyebrow">Pippin Plaza</span><p class="party-card-intro">Good quests. Great company.</p></div>
+          </div>
+          <div class="party-invitation-content">
+            <h2 id="invitation-heading">Your party invitation</h2>
+            <p id="message" class="party-message" role="status" aria-live="polite">Checking your invitation…</p>
+            <strong id="code" class="party-code" aria-label="Party code" hidden></strong>
+            <p id="region" class="party-region" hidden></p>
+
+            <div class="party-invitation-actions">
+              <a id="store" class="btn btn-primary party-action" href="https://apps.apple.com/app/id6787434739">Get the game on the App Store <span aria-hidden="true">↗</span></a>
+              <button id="copy" class="btn btn-secondary party-action" type="button" hidden>Copy invitation link</button>
+            </div>
+            <p class="party-invitation-note"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 15l6-6M8.5 16.5l-1 1a4.24 4.24 0 0 1-6-6l4-4a4.24 4.24 0 0 1 6 0M15.5 7.5l1-1a4.24 4.24 0 0 1 6 6l-4 4a4.24 4.24 0 0 1-6 0"/></svg><span>After installing, open your friend's original invitation again. Keep the full link so the party and region stay together.</span></p>
+          </div>
+          <div class="party-platforms" aria-label="Availability"><span><span class="party-proof-dot" aria-hidden="true"></span> iPhone &amp; iPad</span><span>Android coming soon</span></div>
+        </article>
+
+        <figure class="party-gameplay">
+          <img src="/images/screenshot-coop-v2.png" width="2868" height="1320" alt="Four Pippins working together in a co-op puzzle" fetchpriority="high">
+          <figcaption><span class="party-proof-dot" aria-hidden="true"></span> A peek at the adventure <span class="party-gameplay-caption">Actual gameplay</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="party-join-section" aria-labelledby="party-join-heading">
+      <div class="container">
+        <div class="party-join-heading"><span class="label">From invitation to adventure</span><h2 id="party-join-heading">A few steps. A whole lot of teamwork.</h2></div>
+        <ol class="party-steps">
+          <li><span class="party-step-number" aria-hidden="true">01</span><div><h3>Get the game</h3><p>Pippin Plaza is available on iPhone and iPad. Android is coming soon.</p></div></li>
+          <li><span class="party-step-number" aria-hidden="true">02</span><div><h3>Open the invitation</h3><p>Return to the original link your friend sent after the game is installed.</p></div></li>
+          <li><span class="party-step-number" aria-hidden="true">03</span><div><h3>Play together</h3><p>Lift, jump and puzzle your way to the exit. Every Pippin matters.</p></div></li>
+        </ol>
+      </div>
+    </section>
   </main>
+
+  <footer class="party-footer">
+    <div class="container party-footer-inner">
+      <span>© <span id="party-year">2026</span> Pippin Plaza. Made with ♥ &amp; teamwork.</span>
+      <nav aria-label="Footer navigation"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/support.html">Support</a></nav>
+    </div>
+  </footer>
   <script>
     (() => {
       const params = new URLSearchParams(location.search);
@@ -47,7 +111,9 @@
         (cluster === null || /^[A-Za-z0-9._-]{0,32}$/.test(cluster));
       const message = document.getElementById('message');
       if (!valid) {
-        message.textContent = 'This party link is invalid. Ask your friend for a new link.';
+        message.textContent = keys.length === 0
+          ? "Have an invitation? Open the link your friend sent to see your party details here."
+          : 'This party link is invalid. Ask your friend for a new link.';
         return;
       }
       document.getElementById('code').textContent = code;
@@ -87,5 +153,6 @@
       });
     })();
   </script>
+  <script>document.getElementById('party-year').textContent = String(new Date().getFullYear());</script>
 </body>
 </html>
