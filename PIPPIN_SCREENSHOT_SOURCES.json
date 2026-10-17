@@ -1,0 +1,46 @@
+{
+  "owner_confirmation_date": "2026-10-17",
+  "description": "Owner-provided current App Store screenshots; exact unaltered iPhone PNG copies.",
+  "assets": [
+    {
+      "source": "Pippin plaza_2_9_Screenshots/IPhone/Iphone (Funny Fails)/1-iphone.png",
+      "public": "images/pippin-current-01.png",
+      "sha256": "b5cf91be78b9a38f31575620c4f7ea81994306f4eed8150b4327dbfcbc294d98"
+    },
+    {
+      "source": "Pippin plaza_2_9_Screenshots/IPhone/Iphone (Funny Fails)/2-iphone.png",
+      "public": "images/pippin-current-02.png",
+      "sha256": "de257be422b2f33649ff07bce355e2d910fc4d4a6da2c0222be54fe47f365b83"
+    },
+    {
+      "source": "Pippin plaza_2_9_Screenshots/IPhone/Iphone (Funny Fails)/3-iphone.png",
+      "public": "images/pippin-current-03.png",
+      "sha256": "da7cf30cb9bb5730bd2bc8003562372acca2a50163f566e6d72bc617a873c2d7"
+    },
+    {
+      "source": "Pippin plaza_2_9_Screenshots/IPhone/Iphone (Funny Fails)/4-iphone.png",
+      "public": "images/pippin-current-04.png",
+      "sha256": "630b49ebd1e91f4608f2b8bb1ec24d43519d0e4b4930cdf3b326dd181d9c742b"
+    },
+    {
+      "source": "Pippin plaza_2_9_Screenshots/IPhone/Iphone (Funny Fails)/5-iphone.png",
+      "public": "images/pippin-current-05.png",
+      "sha256": "44eb3478e3652dbf593f215fff8ae1674ed6589414d18c350e97de43452a553b"
+    },
+    {
+      "source": "Pippin plaza_2_9_Screenshots/IPhone/Iphone (Funny Fails)/6-iphone.png",
+      "public": "images/pippin-current-06.png",
+      "sha256": "8e29ea3a0c338c61b4c4f0ba6643ccb19daa743333603a9a3487f42c42442487"
+    },
+    {
+      "source": "Pippin plaza_2_9_Screenshots/IPhone/Iphone (Funny Fails)/7-iphone.png",
+      "public": "images/pippin-current-07.png",
+      "sha256": "61c2a17252557ddf94504703e4e93385420c1c82dd9b7cffe8290eace453e86c"
+    },
+    {
+      "source": "Pippin plaza_2_9_Screenshots/IPhone/Iphone (Funny Fails)/8-iphone.png",
+      "public": "images/pippin-current-08.png",
+      "sha256": "90c7df95a921a4a51e798f7ebe213ef55e38089b8160ad92582fc77b21ac5cc3"
+    }
+  ]
+}
